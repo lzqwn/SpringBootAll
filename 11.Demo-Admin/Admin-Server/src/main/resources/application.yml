@@ -1,0 +1,6 @@
+# Cient配置的服务端口号
+server:
+  port: 8002
+spring:
+    application:
+      name: admin-server
