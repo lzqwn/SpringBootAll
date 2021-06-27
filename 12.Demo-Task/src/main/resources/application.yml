@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+# 下面的配置等同于 TaskConfig
+# 开启串行设置
+#spring:
+#  task:
+#    scheduling:
+#      pool:
+#        size: 20 #线程池大小
+#      thread-name-prefix: Job-Thread- #线程名前缀
+# 开启并行设置
+#spring:
+#  task:
+#    execution:
+#      pool:
+#        max-size: 20
+#      thread-name-prefix: execution-
+timing-task:
+  cron1: 0/1 * * * * ?
+  cron2: 0/5 * * * * ?
