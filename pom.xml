@@ -19,10 +19,13 @@
         <module>6.Demo-Jackson</module>
         <module>7.Demo-Swagger2</module>
         <module>8.Demo-Email</module>
+        <module>9.Demo-Exception</module>
         <module>10.Demo-Filter-Interceptor</module>
         <module>11.Demo-Actuator</module>
         <module>11.Demo-Admin</module>
-        <module>9.Demo-Exception</module>
+        <module>12.Demo-Task</module>
+        <module>12.Demo-Task-Quartz</module>
+        <module>12.Demo-Task-xxl-job-admin</module>
 
     </modules>
 
