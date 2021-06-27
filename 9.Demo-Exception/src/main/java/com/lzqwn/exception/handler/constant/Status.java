@@ -4,7 +4,7 @@ import lombok.Getter;
 
 
 /**
- * 态码封装
+ * 状态码封装
  */
 @Getter
 public enum Status {

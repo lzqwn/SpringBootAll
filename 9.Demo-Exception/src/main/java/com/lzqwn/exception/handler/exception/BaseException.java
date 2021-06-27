@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
+//添加父类的属性来重写equals与hashcode方法
+//@Data默认调用@EqualsAndHashCode(callSuper = false)
 @EqualsAndHashCode(callSuper = true)
 public class BaseException extends RuntimeException {
     private Integer code;

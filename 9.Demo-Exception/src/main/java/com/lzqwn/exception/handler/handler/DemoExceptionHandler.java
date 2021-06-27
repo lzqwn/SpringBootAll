@@ -4,11 +4,18 @@ import com.lzqwn.exception.handler.exception.JsonException;
 import com.lzqwn.exception.handler.exception.PageException;
 import com.lzqwn.exception.handler.model.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * <p>
+ * 统一异常处理
+ * </p>
+ */
 @ControllerAdvice
 @Slf4j
 public class DemoExceptionHandler {
@@ -21,9 +28,11 @@ public class DemoExceptionHandler {
      * @return 统一返回 json 格式
      */
     @ExceptionHandler(value = JsonException.class)
+    @ResponseStatus(value = HttpStatus.OK)
     @ResponseBody
     public ApiResponse jsonErrorHandler(JsonException exception) {
         log.error("【JsonException】:{}", exception.getMessage());
+        //此处可以添加日志保存等等
         return ApiResponse.ofException(exception);
     }
 

@@ -7,9 +7,6 @@ import lombok.Getter;
  * <p>
  * 页面异常
  * </p>
- *
- * @author yangkai.shen
- * @date Created in 2018-10-02 21:18
  */
 @Getter
 public class PageException extends BaseException {
