@@ -11,6 +11,7 @@
     <modules>
         <module>1.Demo-Config</module>
         <module>2.Demo-JdbcTemplate-druid-Mybatis</module>
+        <module>2.Demo-Mybatis-mapper-page</module>
         <module>2.Demo-Mybatis-Plus</module>
         <module>2.Demo-Mybatis-mapper-page</module>
         <module>3.Demo-Aop</module>
@@ -27,8 +28,7 @@
         <module>12.Demo-Task</module>
         <module>12.Demo-Task-Quartz</module>
         <module>12.Demo-Task-xxl-job-admin</module>
-        <module>13.Demo-Shiro</module>
-
+        <module>13.Demo-Springboot-Shiro</module>
 
     </modules>
 

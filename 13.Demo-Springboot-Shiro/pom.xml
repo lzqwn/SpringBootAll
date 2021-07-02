@@ -9,33 +9,64 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>2.Demo-Mybatis-mapper-page</artifactId>
+    <artifactId>13.Demo-Springboot-Shiro</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mybatis.mapper.version>2.1.5</mybatis.mapper.version>
-        <mybatis.pagehelper.version>1.3.1</mybatis.pagehelper.version>
+
     </properties>
 
     <dependencies>
+        <!-- mysql-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
+
+        <!--thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!--shiro-thymeleaf-->
+     <!--   <dependency>
+            <groupId>com.github.theborakompanioni</groupId>
+            <artifactId>thymeleaf-extras-shiro</artifactId>
+        </dependency>
+        &lt;!&ndash;shiro-springboot&ndash;&gt;
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-starter</artifactId>
+            <version>${shiro.springboot.version}</version>
+        </dependency>
+        &lt;!&ndash;引入shiro和ehcache&ndash;&gt;
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+        </dependency>
+
+        &lt;!&ndash;redis整合springboot&ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>-->
         <!-- 通用Mapper -->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>${mybatis.mapper.version}</version>
         </dependency>
 
         <!-- 分页助手 -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>${mybatis.pagehelper.version}</version>
         </dependency>
 
         <dependency>
@@ -67,9 +98,10 @@
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>
