@@ -37,7 +37,7 @@ spring:
       max-open-prepared-statements: 20
       max-pool-prepared-statement-per-connection-size: 20
       # 配置监控统计拦截的filters, 去掉后监控界面sql无法统计, 'wall'用于防火墙
-      filters: stat,wall,log4j
+      filters: stat,wall
       # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
       aop-patterns: com.springboot.servie.*
 
@@ -65,7 +65,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
-  type-aliases-package: com.springboot.springbootjdbc.bean
+  type-aliases-package: com.lzqwn.shiro.entity
   # 开启驼峰命名转换
   configuration:
     map-underscore-to-camel-case: true
