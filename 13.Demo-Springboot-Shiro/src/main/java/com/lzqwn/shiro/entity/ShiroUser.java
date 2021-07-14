@@ -1,10 +1,11 @@
 package com.lzqwn.shiro.entity;
 
-import com.baomidou.mybatisplus.extension.activerecord.Model;
-import java.io.Serializable;
-import lombok.Data;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * 用户表(ShiroUser)表实体类
@@ -15,30 +16,51 @@ import com.baomidou.mybatisplus.annotation.TableId;
 @Data
 @SuppressWarnings("serial")
 public class ShiroUser extends Model<ShiroUser> {
-  @TableId(type = IdType.AUTO)
-    /**主键*/
+    @TableId(type = IdType.AUTO)
     private Long id;
-    /**用户名*/
+    /**
+     * 用户名
+     */
     private String username;
-    /**密码*/
+    /**
+     * 密码
+     */
     private String password;
-    /**盐值*/
+    /**
+     * 盐值
+     */
     private String salt;
-    /**昵称*/
+    /**
+     * 昵称
+     */
     private String nickname;
-    /**手机*/
+    /**
+     * 手机
+     */
     private String phone;
-    /**邮箱*/
+    /**
+     * 邮箱
+     */
     private String email;
-    /**生日*/
+    /**
+     * 生日
+     */
     private Long birthday;
-    /**性别，男-1，女-2*/
+    /**
+     * 性别，男-1，女-2
+     */
     private Integer sex;
-    /**状态，启用-1，禁用-0*/
+    /**
+     * 状态，启用-1，禁用-0
+     */
     private Integer status;
-    /**创建时间*/
+    /**
+     * 创建时间
+     */
     private Long createTime;
-    /**更新时间*/
+    /**
+     * 更新时间
+     */
     private Long updateTime;
 
 
@@ -51,4 +73,4 @@ public class ShiroUser extends Model<ShiroUser> {
     protected Serializable pkVal() {
         return this.id;
     }
-    }
+}

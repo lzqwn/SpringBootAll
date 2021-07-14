@@ -1,10 +1,11 @@
 package com.lzqwn.shiro.entity;
 
-import com.baomidou.mybatisplus.extension.activerecord.Model;
-import java.io.Serializable;
-import lombok.Data;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * 角色表(ShiroRole)表实体类
@@ -15,16 +16,23 @@ import com.baomidou.mybatisplus.annotation.TableId;
 @Data
 @SuppressWarnings("serial")
 public class ShiroRole extends Model<ShiroRole> {
-  @TableId(type = IdType.AUTO)
-    /**主键*/
+    @TableId(type = IdType.AUTO)
     private Long id;
-    /**角色名*/
+    /**
+     * 角色名
+     */
     private String name;
-    /**描述*/
+    /**
+     * 描述
+     */
     private String description;
-    /**创建时间*/
+    /**
+     * 创建时间
+     */
     private Long createTime;
-    /**更新时间*/
+    /**
+     * 更新时间
+     */
     private Long updateTime;
 
 
@@ -37,4 +45,4 @@ public class ShiroRole extends Model<ShiroRole> {
     protected Serializable pkVal() {
         return this.id;
     }
-    }
+}

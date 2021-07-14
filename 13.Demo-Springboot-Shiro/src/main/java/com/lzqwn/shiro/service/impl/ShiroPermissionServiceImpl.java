@@ -1,8 +1,8 @@
 package com.lzqwn.shiro.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.lzqwn.shiro.mapper.ShiroPermissionMapper;
 import com.lzqwn.shiro.entity.ShiroPermission;
+import com.lzqwn.shiro.mapper.ShiroPermissionMapper;
 import com.lzqwn.shiro.service.ShiroPermissionService;
 import org.springframework.stereotype.Service;
 

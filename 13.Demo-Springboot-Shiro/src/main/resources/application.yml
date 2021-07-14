@@ -62,10 +62,3 @@ spring:
       filter:
         stat:
           log-slow-sql: true
-
-mybatis:
-  mapper-locations: classpath:/mapper/*.xml
-  type-aliases-package: com.lzqwn.shiro.entity
-  # 开启驼峰命名转换
-  configuration:
-    map-underscore-to-camel-case: true
