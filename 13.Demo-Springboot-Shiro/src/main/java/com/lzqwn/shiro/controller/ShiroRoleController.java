@@ -1,21 +1,14 @@
 package com.lzqwn.shiro.controller;
 
 
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;
 import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lzqwn.shiro.entity.ShiroRole;
 import com.lzqwn.shiro.service.ShiroRoleService;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.io.Serializable;
@@ -25,7 +18,7 @@ import java.util.List;
  * 角色表(ShiroRole)表控制层
  *
  * @author lzqwn
- * @since 2021-07-14 16:19:35
+ * @since 2021-07-14 16:43:07
  */
 @RestController
 @RequestMapping("shiroRole")
@@ -39,7 +32,7 @@ public class ShiroRoleController extends ApiController {
     /**
      * 分页查询所有数据
      *
-     * @param page      分页对象
+     * @param page 分页对象
      * @param shiroRole 查询实体
      * @return 所有数据
      */

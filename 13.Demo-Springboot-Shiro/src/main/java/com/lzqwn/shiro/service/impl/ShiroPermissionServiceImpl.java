@@ -1,7 +1,7 @@
 package com.lzqwn.shiro.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.lzqwn.shiro.dao.ShiroPermissionDao;
+import com.lzqwn.shiro.mapper.ShiroPermissionMapper;
 import com.lzqwn.shiro.entity.ShiroPermission;
 import com.lzqwn.shiro.service.ShiroPermissionService;
 import org.springframework.stereotype.Service;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
  * 权限表(ShiroPermission)表服务实现类
  *
  * @author lzqwn
- * @since 2021-07-14 16:19:33
+ * @since 2021-07-14 16:43:06
  */
 @Service("shiroPermissionService")
-public class ShiroPermissionServiceImpl extends ServiceImpl<ShiroPermissionDao, ShiroPermission> implements ShiroPermissionService {
+public class ShiroPermissionServiceImpl extends ServiceImpl<ShiroPermissionMapper, ShiroPermission> implements ShiroPermissionService {
 
 }

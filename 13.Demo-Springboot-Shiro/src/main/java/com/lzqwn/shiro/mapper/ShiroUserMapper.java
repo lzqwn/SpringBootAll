@@ -1,4 +1,4 @@
-package com.lzqwn.shiro.dao;
+package com.lzqwn.shiro.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lzqwn.shiro.entity.ShiroUser;
@@ -7,8 +7,8 @@ import com.lzqwn.shiro.entity.ShiroUser;
  * 用户表(ShiroUser)表数据库访问层
  *
  * @author lzqwn
- * @since 2021-07-14 16:19:35
+ * @since 2021-07-14 16:43:07
  */
-public interface ShiroUserDao extends BaseMapper<ShiroUser> {
+public interface ShiroUserMapper extends BaseMapper<ShiroUser> {
 
 }
