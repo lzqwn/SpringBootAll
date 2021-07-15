@@ -10,7 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @author lzqwn
  * @since 2021-07-14 17:18:25
  */
-@Mapper
 public interface ShiroPermissionMapper extends BaseMapper<ShiroPermission> {
 
 }
