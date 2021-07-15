@@ -1,7 +1,5 @@
 package com.lzqwn.shiro.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
@@ -16,7 +14,9 @@ import java.io.Serializable;
 @Data
 @SuppressWarnings("serial")
 public class ShiroRolePermission extends Model<ShiroRolePermission> {
-    /**角色主键*/
+    /**
+     * 角色主键
+     */
     private Long roleId;
     /**
      * 权限主键

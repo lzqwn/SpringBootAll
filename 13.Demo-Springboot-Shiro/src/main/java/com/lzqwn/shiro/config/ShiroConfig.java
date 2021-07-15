@@ -8,29 +8,28 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Configuration
-public class ShiroConfig
-{
+public class ShiroConfig {
     @Bean
     public ShiroFilterFactoryBean getShiroFilterFactoryBean(SecurityManager securityManager) {
         //创建shiro的filter
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
-        Map<String,String> map = new LinkedHashMap<>();
-        map.put("/**","authc");
+        Map<String, String> map = new LinkedHashMap<>();
+        map.put("/**", "authc");
+        map.put("/login", "anon");
         //配置授权规则
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         //注入安全管理器
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         return shiroFilterFactoryBean;
     }
+
     //安全管理器
     @Bean
-    public DefaultWebSecurityManager webSecurityManager(Realm realm)
-    {
+    public DefaultWebSecurityManager webSecurityManager(Realm realm) {
         DefaultWebSecurityManager defaultWebSecurityManager = new DefaultWebSecurityManager();
         defaultWebSecurityManager.setRealm(realm);
         return defaultWebSecurityManager;
@@ -38,8 +37,7 @@ public class ShiroConfig
 
     //使用自定义realm
     @Bean
-    public Realm getRealm()
-    {
+    public Realm getRealm() {
         return new CustomerRealm();
     }
 }

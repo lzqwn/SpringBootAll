@@ -2,7 +2,6 @@ package com.lzqwn.shiro.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lzqwn.shiro.entity.ShiroUser;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 用户表(ShiroUser)表数据库访问层

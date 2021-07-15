@@ -7,8 +7,7 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
-public class CustomerRealm extends AuthorizingRealm
-{
+public class CustomerRealm extends AuthorizingRealm {
     //获取授权信息
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {

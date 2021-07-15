@@ -2,21 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Document</title>
 </head>
 <body>
 
-    <h1>用户注册</h1>
+<h1>用户注册</h1>
 
 
-    <form th:action="@{/user/register}" method="post">
-        用户名:<input type="text" name="username" > <br/>
-        密码  : <input type="text" name="password"> <br>
-        <input type="submit" value="立即注册">
-    </form>
+<form method="post" th:action="@{/user/register}">
+    用户名:<input name="username" type="text"> <br/>
+    密码 : <input name="password" type="text"> <br>
+    <input type="submit" value="立即注册">
+</form>
 
 </body>
 </html>
