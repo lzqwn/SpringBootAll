@@ -1,11 +1,12 @@
 package com.lzqwn.shiro.controller;
 
+import cn.hutool.captcha.CaptchaUtil;
+import cn.hutool.captcha.ShearCaptcha;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -46,9 +47,17 @@ public class UserController {
      */
     @RequestMapping("getImage")
     public void getImage(HttpSession session, HttpServletResponse response) throws IOException {
-        /*//生成验证码
-        String code = VerifyCodeUtils.generateVerifyCode(4);
-        //验证码放入session
+        ServletOutputStream os = response.getOutputStream();
+        //定义图形验证码的长、宽、验证码字符数、干扰线宽度
+        ShearCaptcha captcha = CaptchaUtil.createShearCaptcha(200, 100, 4, 4);
+        //图形验证码写出，可以写出到文件，也可以写出到流
+        captcha.write(os);
+        //存入session方便验证
+        session.setAttribute("yzm",captcha);
+        //验证图形验证码的有效性，返回boolean值
+       // captcha.verify("1234");
+
+       /* //验证码放入session
         session.setAttribute("code", code);
         //验证码存入图片
         ServletOutputStream os = response.getOutputStream();
@@ -88,7 +97,6 @@ public class UserController {
      * @param password
      * @return
      */
-
     @RequestMapping("login")
     public String login(String username, String password, String code, HttpSession session) {
         //比较验证码

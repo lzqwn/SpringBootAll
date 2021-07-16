@@ -18,8 +18,15 @@ public class ShiroConfig {
         //创建shiro的filter
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         Map<String, String> map = new LinkedHashMap<>();
+        //anon 设置为公共资源  放行资源放在下面
+        map.put("/login.html","anon");
+        map.put("/user/getImage","anon");
+        map.put("/user/register","anon");
+        map.put("/user/registerview","anon");
+        map.put("/user/login","anon");
         map.put("/**", "authc");
-        map.put("/login", "anon");
+        //默认认证界面路径
+        shiroFilterFactoryBean.setLoginUrl("/user/loginview");
         //配置授权规则
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         //注入安全管理器

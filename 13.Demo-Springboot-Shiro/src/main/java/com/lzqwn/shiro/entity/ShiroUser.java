@@ -1,11 +1,16 @@
 package com.lzqwn.shiro.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * 用户表(ShiroUser)表实体类
@@ -49,19 +54,23 @@ public class ShiroUser extends Model<ShiroUser> {
     /**
      * 性别，男-1，女-2
      */
+    @TableField(fill = FieldFill.DEFAULT)
     private Integer sex;
     /**
      * 状态，启用-1，禁用-0
      */
+    @TableLogic
     private Integer status;
     /**
      * 创建时间
      */
-    private Long createTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime createTime;
     /**
      * 更新时间
      */
-    private Long updateTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updateTime;
 
 
     /**
