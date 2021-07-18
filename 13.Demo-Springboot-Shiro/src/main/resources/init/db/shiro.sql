@@ -23,7 +23,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `shiro_user`;
 CREATE TABLE `shiro_user`
 (
-    `id`          bigint(64)  NOT NULL COMMENT '主键',
+    `id`          bigint(64)  NOT NULL AUTO_INCREMENT COMMENT '主键',
     `username`    varchar(50) NOT NULL COMMENT '用户名',
     `password`    varchar(60) NOT NULL COMMENT '密码',
     `salt`        varchar(60) NOT NULL COMMENT '盐值',
@@ -33,8 +33,8 @@ CREATE TABLE `shiro_user`
     `birthday`    bigint(13)           DEFAULT NULL COMMENT '生日',
     `sex`         int(2)               DEFAULT NULL COMMENT '性别，男-1，女-2',
     `status`      int(2)      NOT NULL DEFAULT '1' COMMENT '状态，启用-1，禁用-0',
-    `create_time` bigint(13)  NOT NULL COMMENT '创建时间',
-    `update_time` bigint(13)  NOT NULL COMMENT '更新时间',
+    `create_time` timestamp  NOT NULL COMMENT '创建时间',
+    `update_time` timestamp  NOT NULL COMMENT '更新时间',
     PRIMARY KEY (`id`),
     UNIQUE KEY `username` (`username`),
     UNIQUE KEY `phone` (`phone`),

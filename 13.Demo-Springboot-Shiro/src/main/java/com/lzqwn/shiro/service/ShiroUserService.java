@@ -10,5 +10,5 @@ import com.lzqwn.shiro.entity.ShiroUser;
  * @since 2021-07-14 17:18:26
  */
 public interface ShiroUserService extends IService<ShiroUser> {
-
+    void register(ShiroUser user);
 }

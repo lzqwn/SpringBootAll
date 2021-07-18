@@ -2,11 +2,14 @@ package com.lzqwn.shiro.controller;
 
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.ShearCaptcha;
+import com.lzqwn.shiro.entity.ShiroUser;
+import com.lzqwn.shiro.service.ShiroUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,8 +22,9 @@ import java.io.IOException;
 @RequestMapping("user")
 public class UserController {
 
-    /*@Autowired
-    private UserService userService;*/
+    @Autowired
+    ShiroUserService userService;
+
 
 
     /*
@@ -68,8 +72,8 @@ public class UserController {
     /*
      * 用户注册
      */
-   /* @RequestMapping("register")
-    public String register(User user) {
+    @RequestMapping("register")
+    public String register(ShiroUser user) {
         try {
             userService.register(user);
             return "redirect:/user/loginview";
@@ -77,7 +81,7 @@ public class UserController {
             e.printStackTrace();
             return "redirect:/user/registerview";
         }
-    }*/
+    }
 
 
     /**

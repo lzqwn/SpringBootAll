@@ -54,7 +54,6 @@ public class ShiroUser extends Model<ShiroUser> {
     /**
      * 性别，男-1，女-2
      */
-    @TableField(fill = FieldFill.DEFAULT)
     private Integer sex;
     /**
      * 状态，启用-1，禁用-0
@@ -64,7 +63,7 @@ public class ShiroUser extends Model<ShiroUser> {
     /**
      * 创建时间
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
     /**
      * 更新时间
