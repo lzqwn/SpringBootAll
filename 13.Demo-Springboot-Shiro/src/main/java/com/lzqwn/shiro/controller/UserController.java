@@ -2,6 +2,7 @@ package com.lzqwn.shiro.controller;
 
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.ShearCaptcha;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lzqwn.shiro.entity.ShiroUser;
 import com.lzqwn.shiro.service.ShiroUserService;
 import org.apache.shiro.SecurityUtils;
@@ -104,9 +105,9 @@ public class UserController {
     @RequestMapping("login")
     public String login(String username, String password, String code, HttpSession session) {
         //比较验证码
-        String codes = (String) session.getAttribute("code");
+        ShearCaptcha captcha = (ShearCaptcha) session.getAttribute("yzm");
         try {
-            if (codes.equalsIgnoreCase(code)) {
+            if (captcha.verify(code)) {
                 //获取主体对象
                 Subject subject = SecurityUtils.getSubject();
                 subject.login(new UsernamePasswordToken(username, password));

@@ -29,7 +29,6 @@
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
-
         <!--thymeleaf-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,16 +46,16 @@
             <version>${shiro.springboot.version}</version>
         </dependency>
         <!--引入shiro和ehcache-->
-        <!--<dependency>
+        <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-ehcache</artifactId>
         </dependency>
 
-        &lt;!&ndash;redis整合springboot&ndash;&gt;
+        <!--redis整合springboot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>-->
+        </dependency>
         <!-- mybatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
